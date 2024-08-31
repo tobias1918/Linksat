@@ -37,6 +37,10 @@ body {
   text-align: center;
 }
 
+.hidden {
+  overflow: hidden;
+}
+
 .boton-2:hover {
   background-color: #2eaee5;
 }
@@ -450,7 +454,6 @@ body {
 
 .section-5 {
   height: 50vh;
-  background-image: url("../img/hombre-recostado2.png");
   background-size: cover;
   display: flex;
   align-items: center;
