@@ -1,0 +1,74 @@
+/* Animación de deslizamiento hacia arriba */
+.slide-up {
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.slide-up.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animación de deslizamiento de derecha a izquierda */
+.slide-right {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.slide-right.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Animación de deslizamiento de izquierda a derecha */
+.slide-left {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.slide-left.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+/* Añade esta clase a los elementos que quieras animar */
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(100%);
+    animation: slideInRight 1s ease-out forwards;
+}
+
+/* Definición de la animación */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Añade esta clase a los elementos que quieras animar */
+.slide-in {
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideIn 1s ease-out forwards;
+}
+
+/* Definición de la animación */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
