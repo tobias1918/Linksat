@@ -761,6 +761,9 @@ ul {
 }
 
 @media (max-width: 1200px) {
+  .cajas-localidades{
+    margin-left: 15px;
+  }
 
   .title-coberturas{
     font-size: 34px;
