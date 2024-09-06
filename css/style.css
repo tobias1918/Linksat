@@ -477,7 +477,9 @@ body {
 }
 
 .cajas-localidades{
-  box-shadow: -15px 0px #0067ad;
+  border-radius: 15px;
+  box-shadow: -12px 12px 0px #0067ad;
+  padding: 20px;
 }
 
 .ul-title{
