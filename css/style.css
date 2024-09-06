@@ -484,6 +484,10 @@ body {
   color: #0056b3 !important;
 }
 
+.title-coberturas{
+  font-size: 50px;
+}
+
 
 /* SECTION 5 */
 
@@ -754,6 +758,10 @@ ul {
 }
 
 @media (max-width: 1200px) {
+
+  .title-coberturas{
+    font-size: 34px;
+  }
 
   .botones-section-4{
     gap: 2%;
