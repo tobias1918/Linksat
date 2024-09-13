@@ -375,6 +375,7 @@ body {
 .titulo-planes h3 {
   color: #0067ad;
   margin: 30px 0px;
+  text-align: center;
 }
 
 .planes {
