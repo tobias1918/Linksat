@@ -352,7 +352,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 82%;
+  width: 90%;
 }
 
 .titulo {
@@ -365,6 +365,10 @@ body {
 .contenedor-planes {
   width: 100%;
   margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   /* border: 5px solid black; */
 }
 
@@ -375,16 +379,21 @@ body {
 
 .planes {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 40px;
+  width: 100%;
 }
+
+
+
+
 
 .plan {
   text-decoration: none;
   padding: 10px 25px;
   width: auto;
-  height: 400px;
+  height: 350px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -420,6 +429,11 @@ body {
 }
 
 .plan-black-texto {
+  color: white !important;
+}
+
+.texto-black{
+  font-size: 20px !important;
   color: white !important;
 }
 
