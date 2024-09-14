@@ -548,7 +548,7 @@ body {
   box-shadow: -25px 0px #0067ad;
 }
 .contenedor-section-5 {
-  width: 80%;
+  max-width: 1000px;
   height: 15vh;
 }
 
@@ -995,18 +995,23 @@ ul {
 
   .section-5 {
     height: 50vh;
-    background-image: url("img/hombre-recostado2.jpeg");
     background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
+    
 
     
+  }
+
+  .contenedor-section-5{
+    max-width: 80%;
   }
   .contenedor-section-5 h3,
   .contenedor-section-5 h3 strong {
   font-size: 25px;
   text-align: center;
+
 }
  
 }
