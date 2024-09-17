@@ -13,8 +13,8 @@ body {
 }
 
 .navbar-brand img {
-  max-height: 40px;
-  margin: 10px;
+  max-height: 55px;
+  margin: 7px;
 }
 
 .boton-1 {
@@ -86,6 +86,8 @@ body {
   font-weight: 700;
   max-width: 500px;
 }
+
+
 
 .subtitulo h2 {
   font-size: 25px;
