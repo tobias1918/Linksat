@@ -52,7 +52,8 @@
                 </ul>
                 <ul class="navbar-nav">
                     <li class="nav-item my-1 mx-2">
-                        <a class="nav-link active boton-1 px-4" href="https://linksatcordoba.wispro.co/portal/sign_in?locale=es">Autogestion</a>
+                        <a class="nav-link active boton-1 px-4"
+                            href="https://linksatcordoba.wispro.co/portal/sign_in?locale=es">Autogestion</a>
                     </li>
                     <li class="nav-item my-1 mx-2">
                         <a class="nav-link active boton-2 px-4"
@@ -63,28 +64,531 @@
 
         </div>
     </nav>
-    <section class="section-1 hidden " style="overflow: hidden;">
-        <div class="container presentacion pointer">
-            <div class="container-1 slide-in">
-                <div class="frase slide-in">
-                    <h1 >¡Conéctate sin límites hoy mismo!</h1>
-                    <img src="https://cdn-icons-png.freepik.com/512/72/72264.png" alt="">
+
+    <!-- SECCIÓN HERO - CON JAVASCRIPT Y CONTADOR -->
+    <section class="hero" id="inicio">
+        <!-- Wrapper para controlar el espaciado -->
+        <div class="hero__wrapper">
+            <div class="hero__container">
+                <!-- Bloque de contenido principal -->
+                <div class="hero__content">
+                    <h1 class="hero__title">
+                        Conectá lo esencial <span>con Linksat</span>
+                    </h1>
+
+                    <p class="hero__subtitle">
+                        Internet de alta velocidad y atención de calidad en todo momento
+                    </p>
+
+                    <div class="hero__stats">
+                        <div class="hero__stat-item">
+                            <span class="hero__stat-number" id="stat-localidades">+15</span>
+                            <span class="hero__stat-label">Localidades</span>
+                        </div>
+                        <div class="hero__stat-item">
+                            <span class="hero__stat-number" id="stat-barrios">+50</span>
+                            <span class="hero__stat-label">Barrios</span>
+                        </div>
+                        <div class="hero__stat-item">
+                            <span class="hero__stat-number">24/7</span>
+                            <span class="hero__stat-label">Soporte</span>
+                        </div>
+                    </div>
+
+                    <div class="hero__buttons">
+                        <a href="#planes" class="hero__btn hero__btn--primary">Ver planes</a>
+                        <a href="#cobertura" class="hero__btn hero__btn--secondary">Ver cobertura</a>
+                        <a href="#dgo" class="hero__btn hero__btn--dgo">
+                            <img src="img/LOGO_DGO_SHORT.png" alt="DGO" class="hero__btn-dgo-img">
+                            Beneficios DGO
+                        </a>
+                    </div>
                 </div>
-                <div class="subtitulo">
-                    <h2>Internet rápido y confiable para tu hogar.</h2>
+
+                <!-- Bloque de la imagen -->
+                <div class="hero__image-wrapper">
+                    <img src="img/linky/linygif3.gif" alt="Linky robot" class="hero__image">
                 </div>
-              
             </div>
-            <div class="imagen-brand slide-in-right">
-                <img src="img/mujer-sentada.png" alt="">
+        </div>
+
+        <!-- Ola decorativa inferior -->
+        <div class="hero__wave">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#ffffff" fill-opacity="1"
+                    d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,170.7C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+                </path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DGO UNIFICADA - DOS COLUMNAS -->
+    <section class="section-dgo-unificada hidden" id="dgo">
+        <div class="container-dgo-unificada">
+            <!-- COLUMNA IZQUIERDA - PRESENTACIÓN DGO -->
+            <div class="dgo-col-izquierda slide-left">
+                <div class="dgo-presentacion">
+                    <!-- Logo DGO como imagen en lugar de texto -->
+                    <div class="dgo-logo-badge">
+                        <img src="img/LOGO_DGO_SHORT.png" alt="DGO" class="dgo-badge-img">
+                    </div>
+
+                    <h2 class="dgo-titulo">Series, deportes y tus<br>películas favoritas</h2>
+                    <p class="dgo-descripcion">Disfrutá del mejor contenido en streaming con la velocidad que solo
+                        Linksat te ofrece</p>
+
+                    <!-- Dispositivos con robot superpuesto -->
+                    <div class="dgo-dispositivos-container">
+                        <div class="dgo-devices-robot-wrapper">
+                            <img src="img/dgo/Diseño sin título (12).png" alt="Múltiples dispositivos conectados"
+                                class="dgo-devices-img">
+                            <div class="dgo-robot-overlay">
+                                <img src="img/linky/Linky poses 1.png" alt="Linky robot" class="dgo-robot-img">
+                            </div>
+                        </div>
+
+                        <!-- Contadores con animación -->
+                        <div class="dgo-counters">
+                            <div class="dgo-counter-item">
+                                <span class="dgo-counter-numero" data-target="10000">0</span>
+                                <span class="dgo-counter-label">Títulos on demand</span>
+                            </div>
+                            <div class="dgo-counter-item">
+                                <span class="dgo-counter-numero" data-target="5">0</span>
+                                <span class="dgo-counter-label">Perfiles</span>
+                            </div>
+                            <div class="dgo-counter-item">
+                                <span class="dgo-counter-numero" data-target="24">0</span>
+                                <span class="dgo-counter-label">Canales deportivos</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Logos -->
+                    <div class="dgo-logos-container">
+                        <div class="dgo-logo-item">
+                            <img src="img/LOGO LINKSAT.png" alt="Linksat">
+                        </div>
+                        <span class="dgo-logo-plus">+</span>
+                        <div class="dgo-logo-item">
+                            <img src="img/LOGO_DGO_SHORT.png" alt="DGO">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COLUMNA DERECHA - PLANES DGO -->
+            <div class="dgo-col-derecha slide-right" id="dgo-beneficios">
+                <div class="dgo-planes-header-compacto">
+                    <h3 class="dgo-planes-titulo-compacto">Elegí tu plan <strong>DGO</strong></h3>
+                    <p class="dgo-planes-subtitulo-compacto">Promociones exclusivas para clientes Linksat</p>
+                </div>
+
+                <!-- PLANES COMPACTOS -->
+                <div class="dgo-planes-container-compacto">
+                    <!-- PLAN GO BASIC -->
+                    <div class="dgo-plan-card-compacto" tabindex="0">
+                        <div class="dgo-plan-header-compacto">
+                            <span class="dgo-plan-nombre-compacto">GO BASIC</span>
+                            <div class="dgo-plan-promo-compacto">
+                                <span class="dgo-promo-badge-compacto">20% OFF</span>
+                                <span class="dgo-promo-duracion-compacto">3 meses</span>
+                            </div>
+                        </div>
+
+                        <div class="dgo-plan-features-compacto">
+                            <div class="dgo-feature-compacto principal">
+                                <span class="dgo-numero-compacto" data-target="59">0</span>
+                                <span class="dgo-texto-compacto">CANALES</span>
+                            </div>
+                            <div class="dgo-feature-compacto">
+                                <span class="dgo-icono-compacto">📺</span>
+                                <span class="dgo-descripcion-compacto">2 pantallas</span>
+                            </div>
+                            <div class="dgo-feature-compacto">
+                                <span class="dgo-icono-compacto">📱</span>
+                                <span class="dgo-descripcion-compacto">5 dispositivos</span>
+                            </div>
+                        </div>
+
+                        <a href="https://walink.co/2a80b8" class="dgo-plan-link-compacto">Consultar</a>
+                    </div>
+
+                    <!-- PLAN GO FULL -->
+                    <div class="dgo-plan-card-compacto dgo-plan-destacado-compacto" tabindex="0">
+                        <span class="dgo-label-popular-compacto">🔥 MÁS ELEGIDO</span>
+                        <div class="dgo-plan-header-compacto">
+                            <span class="dgo-plan-nombre-compacto">GO FULL</span>
+                            <div class="dgo-plan-promo-compacto">
+                                <span class="dgo-promo-badge-compacto">30% OFF</span>
+                                <span class="dgo-promo-duracion-compacto">6 meses</span>
+                            </div>
+                        </div>
+
+                        <div class="dgo-plan-features-compacto">
+                            <div class="dgo-feature-compacto principal">
+                                <span class="dgo-numero-compacto" data-target="95">0</span>
+                                <span class="dgo-texto-compacto">CANALES</span>
+                            </div>
+                            <div class="dgo-feature-compacto">
+                                <span class="dgo-icono-compacto">📺</span>
+                                <span class="dgo-descripcion-compacto">4 pantallas</span>
+                            </div>
+                            <div class="dgo-feature-compacto">
+                                <span class="dgo-icono-compacto">📱</span>
+                                <span class="dgo-descripcion-compacto">10 dispositivos</span>
+                            </div>
+                        </div>
+
+                        <a href="https://walink.co/2a80b8" class="dgo-plan-link-compacto">Consultar</a>
+                    </div>
+                </div>
+
+                <!-- BENEFICIOS ADICIONALES COMPACTOS -->
+                <div class="dgo-beneficios-grid-compacto">
+                    <div class="dgo-beneficio-item-compacto">
+                        <span class="dgo-beneficio-icono">🎬</span>
+                        <span class="dgo-beneficio-texto">+10.000 títulos</span>
+                    </div>
+                    <div class="dgo-beneficio-item-compacto">
+                        <span class="dgo-beneficio-icono">⚽</span>
+                        <span class="dgo-beneficio-texto">PACK FUTBOL</span>
+                    </div>
+                    <div class="dgo-beneficio-item-compacto">
+                        <span class="dgo-beneficio-icono">🎤</span>
+                        <span class="dgo-beneficio-texto">ON STAGE</span>
+                    </div>
+                    <div class="dgo-beneficio-item-compacto">
+                        <span class="dgo-beneficio-icono">⭐</span>
+                        <span class="dgo-beneficio-texto">PREMIUM</span>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
-    <section>
-        
+
+    <section class="section-4 hidden" id="planes">
+        <div class="contenedor-section-4">
+            <div class="titulo_planes slide-up">
+                <h2>PLANES <strong>LINKSAT</strong></h2>
+                <p class="subtitulo-planes">Eleji el mejor plan para vos.</p>
+            </div>
+
+            <!-- PLANES INALÁMBRICOS -->
+            <div class="contenedor-planes">
+                <div class="titulo-planes pointer">
+                    <h3>PLANES <strong>INALÁMBRICOS</strong></h3>
+                </div>
+                <div class="planes">
+                    <!-- PLAN START -->
+                    <div class="plan" tabindex="0">
+                        <div class="plan__content">
+                            <h2 class="plan__title">PLAN START</h2>
+                            <div class="plan__velocidad">
+                                <h3>30 MB</h3>
+                            </div>
+                            <div class="plan__price">
+                                <h2 class="plan__price-active">$ 32.980<span class="plan__price-period">/mes</span></h2>
+                            </div>
+                            <hr class="my-3">
+                            <div class="plan__description">
+                                <ul>
+                                    <li><span>Downstream hasta <strong>30 mbps</strong></span></li>
+                                    <li><span>Upstream hasta <strong>10 mbps</strong></span></li>
+                                    <li><span>Atención y soporte técnico 24/7</span></li>
+                                    <li><span>Instalación incluida</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="plan__action">
+                            <a class="plan__link" href="https://app.linksatcba.com.ar/applications/form/new"
+                                target="_blank">Contratar</a>
+                        </div>
+                    </div>
+
+                    <!-- PLAN HOME (con POPULAR arriba y RECOMENDADO abajo) -->
+                    <div class="plan plan-destacado" tabindex="0">
+                        <span class="label--offer label-popular">POPULAR</span>
+                        <div class="plan__content">
+                            <h2 class="plan__title">PLAN HOME</h2>
+                            <div class="plan__velocidad">
+                                <h3>40 MB</h3>
+                            </div>
+                            <div class="plan__price">
+                                <h2 class="plan__price-active">$ 39.050<span class="plan__price-period">/mes</span></h2>
+                            </div>
+                            <hr class="my-3">
+                            <div class="plan__description">
+                                <ul>
+                                    <li><span>Downstream hasta <strong>40 mbps</strong></span></li>
+                                    <li><span>Upstream hasta <strong>15 mbps</strong></span></li>
+                                    <li><span>Atención y soporte técnico 24/7</span></li>
+                                    <li><span>Instalación incluida</span></li>
+                                    <li><span><strong>Más elegido por nuestros clientes</strong></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="plan__action">
+                            <a class="plan__link" href="https://app.linksatcba.com.ar/applications/form/new"
+                                target="_blank">Contratar</a>
+                        </div>
+                    </div>
+
+                    <!-- PLAN PLUS -->
+                    <div class="plan" tabindex="0">
+                        <div class="plan__content">
+                            <h2 class="plan__title">PLAN PLUS</h2>
+                            <div class="plan__velocidad">
+                                <h3>50 MB</h3>
+                            </div>
+                            <div class="plan__price">
+                                <h2 class="plan__price-active">$ 44.175<span class="plan__price-period">/mes</span></h2>
+                            </div>
+                            <hr class="my-3">
+                            <div class="plan__description">
+                                <ul>
+                                    <li><span>Downstream hasta <strong>50 mbps</strong></span></li>
+                                    <li><span>Upstream hasta <strong>20 mbps</strong></span></li>
+                                    <li><span>Atención y soporte técnico 24/7</span></li>
+                                    <li><span>Instalación incluida</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="plan__action">
+                            <a class="plan__link" href="https://app.linksatcba.com.ar/applications/form/new"
+                                target="_blank">Contratar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PLANES FIBRA ÓPTICA -->
+            <div class="contenedor-planes">
+                <div class="titulo-planes pointer">
+                    <h3>PLANES <strong>FIBRA ÓPTICA</strong></h3>
+                </div>
+                <div class="planes">
+                    <!-- PLAN FAMILY (con POPULAR arriba) -->
+                    <div class="plan plan-fibra" tabindex="0">
+                        <span class="label--offer label-popular">POPULAR</span>
+                        <div class="plan__content">
+                            <h2 class="plan__title">PLAN FAMILY</h2>
+                            <div class="plan__velocidad">
+                                <h3>100 MB</h3>
+                            </div>
+                            <div class="plan__price">
+                                <h2 class="plan__price-active">$ 36.450<span class="plan__price-period">/mes</span></h2>
+                            </div>
+                            <hr class="my-3">
+                            <div class="plan__description">
+                                <ul>
+                                    <li><span style="color: #ffffff;">Downstream hasta <strong>100 mbps</strong></span>
+                                    </li>
+                                    <li><span style="color: #ffffff;">Upstream hasta <strong>30 mbps</strong></span>
+                                    </li>
+                                    <li><span style="color: #ffffff;">Atención y soporte técnico 24/7</span></li>
+                                    <li><span style="color: #ffffff;">Instalación incluida</span></li>
+                                    <li><span style="color: #fbbf24;"><strong>Ideal para familias</strong></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="plan__action">
+                            <a class="plan__link" href="https://app.linksatcba.com.ar/applications/form/new"
+                                target="_blank">Contratar</a>
+                        </div>
+                    </div>
+
+                    <!-- PLAN WORK (con RECOMENDADO abajo) -->
+                    <div class="plan plan-fibra" tabindex="0">
+                        <div class="plan__content">
+                            <h2 class="plan__title">PLAN WORK</h2>
+                            <div class="plan__velocidad">
+                                <h3>200 MB</h3>
+                            </div>
+                            <div class="plan__price">
+                                <h2 class="plan__price-active">$ 43.300<span class="plan__price-period">/mes</span></h2>
+                            </div>
+                            <hr class="my-3">
+                            <div class="plan__description">
+                                <ul>
+                                    <li><span style="color: #ffffff;">Downstream hasta <strong>200 mbps</strong></span>
+                                    </li>
+                                    <li><span style="color: #ffffff;">Upstream hasta <strong>50 mbps</strong></span>
+                                    </li>
+                                    <li><span style="color: #ffffff;">Atención y soporte técnico 24/7</span></li>
+                                    <li><span style="color: #ffffff;">Instalación incluida</span></li>
+                                    <li><span style="color: #3b82f6;"><strong>Perfecto para home office</strong></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="plan__action">
+                            <a class="plan__link" href="https://app.linksatcba.com.ar/applications/form/new"
+                                target="_blank">Contratar</a>
+                        </div>
+                    </div>
+
+                    <!-- PLAN GAMER -->
+                    <div class="plan plan-fibra" tabindex="0">
+                        <div class="plan__content">
+                            <h2 class="plan__title">PLAN GAMER</h2>
+                            <div class="plan__velocidad">
+                                <h3>300 MB</h3>
+                            </div>
+                            <div class="plan__price">
+                                <h2 class="plan__price-active">$ 51.600<span class="plan__price-period">/mes</span></h2>
+                            </div>
+                            <hr class="my-3">
+                            <div class="plan__description">
+                                <ul>
+                                    <li><span style="color: #ffffff;">Downstream hasta <strong>300 mbps</strong></span>
+                                    </li>
+                                    <li><span style="color: #ffffff;">Upstream hasta <strong>100 mbps</strong></span>
+                                    </li>
+                                    <li><span style="color: #ffffff;">Atención y soporte técnico 24/7</span></li>
+                                    <li><span style="color: #ffffff;">Instalación incluida</span></li>
+                                    <li><span style="color: #10b981;"><strong>Máxima velocidad para
+                                                gaming</strong></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="plan__action">
+                            <a class="plan__link" href="https://app.linksatcba.com.ar/applications/form/new"
+                                target="_blank">Contratar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </section>
+
+    <section class="section-3 hidden">
+        <div class="alerta-internet pointer">
+            <div class="descripcion-alerta-internet">
+                <h4 class="titulo-a-i">TU CONEXIÓN, <strong class="destacado">MÁS CERCA</strong><br>QUE NUNCA.</h4>
+                <h4 class="descripcion-a-i">Con la app <strong>"Alerta Internet"</strong> podés consultar<br>facturas,
+                    pagar online y hacer reclamos al<br>instante.</h4>
+                <div class="contenedor-botones-app">
+                    <a class="button-a-i" href="https://play.google.com/store/apps/details?id=com.wispro.app&hl=es_AR"
+                        target="_blank">
+                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googleplay.svg"
+                            alt="Google Play" class="icono-app">
+                        Google Play
+                    </a>
+                    <a class="button-a-i button-apple" href="https://apps.apple.com/ar/app/alerta-internet/id1581616962"
+                        target="_blank">
+                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/apple.svg" alt="App Store"
+                            class="icono-app">
+                        App Store
+                    </a>
+                </div>
+            </div>
+            <div class="imagen-a-i">
+                <img src="img/celular-2.png" alt="App Alerta Internet en celular">
+            </div>
+        </div>
+    </section>
+
+    <section class="cobertura hidden" id="cobertura">
+        <div class="container-cobertura">
+            <!-- Cabecera con robot y título -->
+            <div class="cobertura-header">
+                <div class="cobertura-texto slide-left">
+                    <span class="cobertura-badge">COBERTURA</span>
+                    <h2 class="cobertura-titulo">Internet que se adapta a tus <strong>necesidades</strong></h2>
+                    <p class="cobertura-descripcion">Ofrecemos una amplia cobertura en las principales localidades de
+                        Córdoba, garantizando conexiones rápidas y confiables para hogares y empresas.</p>
+                    <div class="cobertura-stats">
+                        <div class="stat-item">
+                            <span class="stat-numero">+15</span>
+                            <span class="stat-label">Localidades</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-numero">+50</span>
+                            <span class="stat-label">Barrios</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-numero">24/7</span>
+                            <span class="stat-label">Soporte</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cobertura-robot slide-right">
+                    <div class="robot-mapa-container">
+                        <img src="img/linky/Linky maps.png" alt="Linky con mapa" class="robot-mapa">
+                        <div class="robot-sombra"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grid de localidades -->
+            <div class="localidades-grid">
+                <div class="localidad-card slide-left">
+                    <div class="card-header">
+                        <h3>Alta Gracia</h3>
+                    </div>
+                    <ul class="barrios-lista">
+                        <li>General Bustos</li>
+                        <li>La Perla</li>
+                        <li>Crucero Sur</li>
+                        <li>Villa Oviedo</li>
+                        <li>Anglo Country</li>
+                        <li>El Golf</li>
+                        <li>Liniers de Horizonte II</li>
+                        <li>Barrio Cámara</li>
+                        <li>Sabattini</li>
+                        <li>San Juan</li>
+                        <li>Portales del Sol</li>
+                    </ul>
+                </div>
+
+                <div class="localidad-card slide-left">
+                    <div class="card-header">
+                        <h3>Villa del Prado</h3>
+                    </div>
+                    <ul class="barrios-lista">
+                        <li>La Donosa</li>
+                        <li>Mitimay</li>
+                        <li>Quintas del Sur</li>
+                        <li>Los Olivares</li>
+                    </ul>
+
+                </div>
+
+                <div class="localidad-card slide-right">
+                    <div class="card-header">
+                        <h3>Villa Parque Santa Ana</h3>
+                    </div>
+                    <ul class="barrios-lista">
+                        <li>Mi Valle Golf</li>
+                        <li>Country La Melinca</li>
+                        <li>Country Campos del Virrey</li>
+                    </ul>
+                </div>
+
+                <div class="localidad-card slide-right">
+                    <div class="card-header">
+                        <h3>Otras localidades</h3>
+                    </div>
+                    <ul class="barrios-lista">
+                        <li>Estación del Carmen</li>
+                        <li>Reserva Tajamar</li>
+                        <li>Villa Juana</li>
+                        <li>Terrazas del Cielo</li>
+                        <li>La Hornilla</li>
+                        <li>Tres Gracias</li>
+                        <li>Villa Camiares</li>
+                        <li>Portales del Tala</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="section-2 hidden" style="overflow: hidden;">
-     
+
         <div class="container py-4 ">
 
             <div class="p-2 bg-body-tertiary rounded-3" id="nosotros">
@@ -98,12 +602,14 @@
                     <div class="col-md-8 p-1 slide-right pointer">
                         <div class="h-100 p-5 bg-body-tertiary border rounded-3 square-white">
                             <h2 class="square-white-text-h2">Nuestra <strong>Empresa</strong> </h2>
-                            <p class="square-text-principal">Linksat Córdoba es una empresa
-                                líder en soluciones de conectividad en el interior de la provincia.
-                                Nos especializamos en brindar acceso a internet de alta calidad para
-                                empresas de todos los tamaños, comercios y hogares. Nuestro compromiso es
-                                ofrecer un servicio confiable, con control y seguimiento constante, y
-                                una atención personalizada para cada cliente.</p>
+                            <p class="square-text-principal">En Linksat Córdoba trabajamos para conectar lo esencial:
+                                las personas, los hogares y los
+                                proyectos que dan vida a nuestra provincia.
+                                Ofrecemos internet de alta calidad con un servicio confiable, atención cercana y el
+                                compromiso
+                                de estar siempre presentes cuando más nos necesitás.
+                                Creemos que cada conexión es una oportunidad para servir con excelencia.
+                            </p>
                             <div class="contenedor-icons">
                                 <img src="img/icon-empresa.png" alt="" class="icon-valores">
                             </div>
@@ -112,55 +618,52 @@
                 </div>
             </div>
 
-        
-                <div class="row align-items-md-stretch p-2 circulos">
-                    <div class="col-md-4 p-2 slide-left circulo">
-                        <div class="h-100 p-5 text-bg-dark rounded-3 square-white pointer"
-                            style="border-radius: 50% !important;display: flex;justify-content: center;flex-direction: column;align-items: center;">
-                            <h2 class="square-white-text-h2">Nuestra <strong>Misión</strong> </h2>
-                            <p style="text-align: center;">Nuestra misión es proporcionar una conectividad rápida,
-                                fiable y
-                                accesible para todos
-                                nuestros usuarios. Nos esforzamos por ser el mejor aliado en el camino hacia la
-                                digitalización, brindando soluciones innovadoras y un servicio excepcional.</p>
-                            <div class="contenedor-icons">
-                                <img src="img/icon-mision.png" alt="" class="icon-valores">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 p-2 circulo">
-                        <div class="h-100 p-5 text-bg-dark rounded-3 square-white pointer"
-                            style="border-radius: 50% !important;display: flex;justify-content: center;flex-direction: column;align-items: center;">
-                            <h2 class="square-white-text-h2">Nuestro <strong>Equipo</strong> </h2>
-                            <p style="text-align: center;">Nuestro equipo está compuesto por profesionales apasionados y
-                                expertos en tecnología,
-                                dedicados a mantenerte siempre conectado. Trabajamos incansablemente para asegurar que
-                                cada
-                                cliente reciba una experiencia de navegación óptima.</p>
-                            <div class="contenedor-icons">
-                                <img src="img/icon-equipo.png" alt="" class="icon-valores">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 p-2 slide-right circulo">
-                        <div class="h-100 p-5 text-bg-dark rounded-3 square-white pointer"
-                            style="border-radius: 50% !important;display: flex;justify-content: center;flex-direction: column;align-items: center;">
-                            <h2 class="square-white-text-h2">Nuestra <strong>Visión</strong> </h2>
-                            <p style="text-align: center;">Aspiramos a ser líderes en el mercado de servicios de
-                                Internet,
-                                reconociendo que la
-                                satisfacción del cliente es nuestra prioridad número uno. Queremos ser la empresa que
-                                elijas
-                                no solo por nuestra tecnología avanzada, sino por nuestra dedicación a ti y a tu
-                                conexión.
-                            </p>
-                            <div class="contenedor-icons">
-                                <img src="img/icon-vision.png" alt="" class="icon-valores">
-                            </div>
+
+            <div class="row align-items-md-stretch p-2 circulos">
+                <div class="col-md-4 p-2 slide-left circulo">
+                    <div class="h-100 p-5 text-bg-dark rounded-3 square-white pointer"
+                        style="border-radius: 50% !important;display: flex;justify-content: center;flex-direction: column;align-items: center;">
+                        <h2 class="square-white-text-h2">Nuestra <strong>Misión</strong> </h2>
+                        <p style="text-align: center;">Brindar un servicio de internet confiable, estable y de alta
+                            velocidad que conecte lo esencial en
+                            la vida de las personas, acompañándolos en su día a día con atención cercana, soluciones
+                            rápidas
+                            y un compromiso constante con la calidad</p>
+                        <div class="contenedor-icons">
+                            <img src="img/icon-mision.png" alt="" class="icon-valores">
                         </div>
                     </div>
                 </div>
-        
+                <div class="col-md-4 p-2 circulo">
+                    <div class="h-100 p-5 text-bg-dark rounded-3 square-white pointer"
+                        style="border-radius: 50% !important;display: flex;justify-content: center;flex-direction: column;align-items: center;">
+                        <h2 class="square-white-text-h2">Nuestro <strong>Equipo</strong> </h2>
+                        <p style="text-align: center;">Nuestro equipo está compuesto por profesionales apasionados y
+                            expertos en tecnología,
+                            dedicados a mantenerte siempre conectado. Trabajamos incansablemente para asegurar que
+                            cada
+                            cliente reciba una experiencia de navegación óptima.</p>
+                        <div class="contenedor-icons">
+                            <img src="img/icon-equipo.png" alt="" class="icon-valores">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 p-2 slide-right circulo">
+                    <div class="h-100 p-5 text-bg-dark rounded-3 square-white pointer"
+                        style="border-radius: 50% !important;display: flex;justify-content: center;flex-direction: column;align-items: center;">
+                        <h2 class="square-white-text-h2">Nuestra <strong>Visión</strong> </h2>
+                        <p style="text-align: center;">Ser la empresa de internet líder en Córdoba, reconocida por
+                            transformar la manera en que las
+                            familias y profesionales se conectan, innovando continuamente y generando experiencias que
+                            fortalezcan la confianza, la cercanía y el sentido de comunidad.
+                        </p>
+                        <div class="contenedor-icons">
+                            <img src="img/icon-vision.png" alt="" class="icon-valores">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 
         </div>
         <div class="container que-ofrecemos pointer">
@@ -169,7 +672,7 @@
             </div>
             <div class="bloque-que-ofrecemos">
                 <div class="imagen-que-ofrecemos slide-left">
-                    <img src="img/mujer-telefono-laptop.png" alt="">
+                    <img src="img/linky/Linky pagando 2.png" alt="">
                 </div>
                 <div class="beneficios">
                     <div class="titulo-general-beneficios slide-right">
@@ -213,274 +716,6 @@
         </div>
 
     </section>
-    <section class="section-3 hidden">
-        <div class="alerta-internet pointer">
-            <div class="descripcion-alerta-internet">
-                <h4 class="titulo-a-i"><strong class="negro">ALERTA </strong><strong>INTERNET</strong><strong
-                        class="negro">!</strong> </h4>
-                <h4 class="subtitulo-a-i">Tenemos app!</h4>
-                <h4 class="descripcion-a-i">Descarga nuestra app y gestiona todo más fácil</h4>
-                <a class="button-a-i" href="https://play.google.com/store/apps/details?id=com.wispro.app&hl=es_AR">
-                    Descargala acá</a>
-            </div>
-            <div class="imagen-a-i">
-                <img src="img/celular-2.png" alt="">
-            </div>
-        </div>
-    </section>
-    <section class="cobertura hidden">
-        <div class="titulo pointer">
-            <h2>Nuestros Planes</h2>
-        </div>
-        <div class="container px-4 py-2 pointer">
-
-            <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-1 ">
-                <div class="col d-flex flex-column align-items-start gap-2 slide-left">
-                    <div class="titulo-planes">
-                        <h3 class="title-coberturas" style="text-align: start;">Coberturas de internet que se adaptan a tus
-                            <strong>necesidades</strong>
-                        </h3>
-                    </div>
-                    <p class="text-body-principal">Ofrecemos una amplia cobertura de internet en diversas localidades,
-                        garantizando conexiones rápidas y confiables. Explora nuestras opciones para encontrar el plan
-                        que mejor se ajuste a tus necesidades de conectividad</p>
-                </div>
-                <div class="col slide-right" style="display: flex;justify-content: center;align-items: center;">
-                    <img src="https://cdn-icons-png.freepik.com/512/11181/11181421.png" alt=""
-                        style="max-height: 150px;">
-                </div>
-            </div>
-
-        </div>
-        <div class="container px-4 py-1 pointer" id="icon-grid">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-1" style="display: flex;justify-content: center;">
-                <div class="col d-flex align-items-start cajas-localidades slide-left">
-                    <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em">
-                        <use xlink:href="#bootstrap"></use>
-                    </svg>
-                    <div >
-                        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis ul-title">Alta Gracia</h3>
-                        <ul style="list-style:none;">
-                            <br>
-                            <li>General Bustos</li>
-                            <li>La Perla</li>
-                            <li>Crucero Sur</li>
-                            <li>Villa Oviedo</li>
-                            <li>Anglo Country</li>
-                            <li>El Golf</li>
-                            <li>Liniers de Horizonte II</li>
-                            <li>Barrio Cámara</li>
-                            <li>Sabattini</li>
-                            <li>San Juan</li>
-                            <li>Portales del Sol</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col d-flex align-items-start cajas-localidades slide-left">
-                    <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em">
-                        <use xlink:href="#cpu-fill"></use>
-                    </svg>
-                    <div>
-                        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis ul-title">Villa del Prado</h3>
-                        <ul style="list-style:none;">
-                            <br>
-                            <li>La Donosa</li>
-                            <li>Mitimay</li>
-                            <li>Quintas del Sur</li>
-                            <li>Los Olivares</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col d-flex align-items-start cajas-localidades slide-right">
-                    <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em">
-                        <use xlink:href="#calendar3"></use>
-                    </svg>
-                    <div>
-                        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis ul-title">Villa Parque Santa Ana</h3>
-                        <ul style="list-style:none;">
-                            <br>
-                            <li>Mi Valle Golf</li>
-                            <li>Country La Melinca</li>
-                            <li>Country Campos del Virrey</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col d-flex align-items-start cajas-localidades slide-right">
-                    <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em">
-                        <use xlink:href="#home"></use>
-                    </svg>
-                    <div>
-                        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis ul-title">Otros</h3>
-                        <ul style="list-style:none;">
-                            <br>
-                            <li>Estación del Carmen</li>
-                            <li>Reserva Tajamar</li>
-                            <li>Villa Juana</li>
-                            <li>Terrazas del Cielo</li>
-                            <li>La Hornilla</li>
-                            <li>Tres Gracias</li>
-                            <li>Villa Camiares</li>
-                            <li>Portales del Tala</li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-
-        </div>
-        </div>
-    </section>
-    <section class="section-4 hidden" id="planes">
-        <div class="contenedor-section-4">
-
-            <div class="contenedor-planes">
-                <div class="titulo-planes pointer">
-                    <h3>PLANES <strong>INALÁMBRICOS RESIDENCIAL</strong></h3>
-                </div>
-                <div class="planes">
-                    <a class="plan" href="https://app.linksatcba.com.ar/applications/form/new">
-                        <div class="titulo-plan">
-                            <h4>PLAN<strong class="numero">20</strong><strong class="conexion">MB</strong></h4>
-                        </div>
-                        <ul class="descripcion-plan">
-                            <li>Downstream hasta <strong class="numero-li">20</strong> mbps</li>
-                            <li>Upstream hasta <strong class="numero-li">10</strong> mbps</li>
-                            <li>Atención y soporte tecnico</li>
-                        </ul>
-                        <div class="precio-plan">
-                            <h4><strong>$</strong>19.130<strong>/mes</strong></h4>
-                        </div>
-                    </a>
-                    <a class="plan" href="https://app.linksatcba.com.ar/applications/form/new">
-                        <div class="titulo-plan">
-                            <h4>PLAN<strong class="numero">30</strong><strong class="conexion">MB</strong></h4>
-                        </div>
-                        <ul class="descripcion-plan">
-                            <li>Downstream hasta <strong class="numero-li">30</strong> mbps</li>
-                            <li>Upstream hasta <strong class="numero-li">10</strong> mbps</li>
-                            <li>Atención y soporte tecnico</li>
-                        </ul>
-                        <div class="precio-plan">
-                            <h4><strong>$</strong>24.830<strong>/mes</strong></h4>
-                        </div>
-                    </a>
-                    <a class="plan" href="https://app.linksatcba.com.ar/applications/form/new">
-                        <div class="titulo-plan">
-                            <h4>PLAN<strong class="numero">40</strong><strong class="conexion">MB</strong></h4>
-                        </div>
-                        <ul class="descripcion-plan">
-                            <li>Downstream hasta <strong class="numero-li">40</strong> mbps</li>
-                            <li>Upstream hasta <strong class="numero-li">15</strong> mbps</li>
-                            <li>Atención y soporte tecnico</li>
-                        </ul>
-                        <div class="precio-plan">
-                            <h4><strong>$</strong>29.390<strong>/mes</strong></h4>
-                        </div>
-                    </a>
-                    <a class="plan" href="https://app.linksatcba.com.ar/applications/form/new">
-                        <div class="titulo-plan">
-                            <h4>PLAN<strong class="numero">50</strong><strong class="conexion">MB</strong></h4>
-                        </div>
-                        <ul class="descripcion-plan">
-                            <li>Downstream hasta <strong class="numero-li">50</strong> mbps</li>
-                            <li>Upstream hasta <strong class="numero-li">20</strong> mbps</li>
-                            <li>Atención y soporte tecnico</li>
-                        </ul>
-                        <div class="precio-plan">
-                            <h4><strong>$</strong>33.265<strong>/mes</strong></h4>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="contenedor-planes">
-                <div class="titulo-planes pointer">
-                    <h3>PLANES <strong>FIBRA ÓPTICA</strong></h3>
-                </div>
-                <div class="planes planes-black">
-                    <a class="plan plan-black" href="https://app.linksatcba.com.ar/applications/form/new">
-                        <div class="titulo-plan">
-                            <h4>PLAN<strong class="numero">50</strong><strong class="conexion">MB</strong></h4>
-                        </div>
-                        <ul class="descripcion-plan">
-                            <li>Downstream hasta <strong class="numero-li">50</strong> mbps</li>
-                            <li>Upstream hasta <strong class="numero-li">20</strong> mbps</li>
-                            <li>Atención y soporte tecnico</li>
-                        </ul>
-                        <div class="precio-plan ">
-                            <h4 class="plan-black-texto"><strong class="plan-black-texto">$</strong>18.060<strong
-                                    class="plan-black-texto">/mes</strong></h4>
-                        </div>
-                    </a>
-                    <a class="plan plan-black" href="https://app.linksatcba.com.ar/applications/form/new">
-                        <div class="titulo-plan">
-                            <h4>PLAN<strong class="numero">80</strong><strong class="conexion">MB</strong></h4>
-                        </div>
-                        <ul class="descripcion-plan">
-                            <li>Downstream hasta <strong class="numero-li">80</strong> mbps</li>
-                            <li>Upstream hasta <strong class="numero-li">30</strong> mbps</li>
-                            <li>Atención y soporte tecnico</li>
-                        </ul>
-                        <div class="precio-plan ">
-                            <h4 class="plan-black-texto"><strong class="plan-black-texto">$</strong>21.700<strong
-                                    class="plan-black-texto">/mes</strong></h4>
-                        </div>
-                    </a>
-                    <a class="plan plan-black" href="https://app.linksatcba.com.ar/applications/form/new">
-                        <div class="titulo-plan">
-                            <h4>PLAN<strong class="numero">100</strong><strong class="conexion">MB</strong></h4>
-                        </div>
-                        <ul class="descripcion-plan">
-                            <li>Downstream hasta <strong class="numero-li">100</strong> mbps</li>
-                            <li>Upstream hasta <strong class="numero-li">30</strong> mbps</li>
-                            <li>Atención y soporte tecnico</li>
-                        </ul>
-                        <div class="precio-plan ">
-                            <h4 class="plan-black-texto"><strong class="plan-black-texto">$</strong>27.445<strong
-                                    class="plan-black-texto">/mes</strong></h4>
-                        </div>
-                    </a>
-                    
-                    <a class="plan plan-black" href="https://app.linksatcba.com.ar/applications/form/new">
-                        <div class="titulo-plan">
-                            <h4>PLAN<strong class="numero">200</strong><strong class="conexion">MB</strong></h4>
-                        </div>
-                        <ul class="descripcion-plan">
-                            <li>Downstream hasta <strong class="numero-li">200</strong> mbps</li>
-                            <li>Upstream hasta <strong class="numero-li">50</strong> mbps</li>
-                            <li>Atención y soporte tecnico</li>
-                        </ul>
-                        <div class="precio-plan ">
-                            <h4 class="plan-black-texto"><strong class="plan-black-texto">$</strong>32.610<strong
-                                    class="plan-black-texto">/mes</strong></h4>
-                        </div>
-                    </a>
-
-                    <a class="plan plan-black" href="https://walink.co/2a80b8" target="_blank">
-                        <div class="titulo-plan">
-                            <h4>PLAN<strong class="numero">300</strong><strong class="conexion">MB</strong></h4>
-                        </div>
-                        <ul class="descripcion-plan">
-                            <li>Downstream hasta <strong class="numero-li">300</strong> mbps</li>
-                            <li>Upstream hasta <strong class="numero-li">100</strong> mbps</li>
-                            <li>Atención y soporte tecnico</li>
-                        </ul>
-                        <div class="precio-plan ">
-                            <h4 class="plan-black-texto"><strong class="texto-black">Consultar precio</strong></h4>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="botones-section-4">
-                <a class="boton-section-4 boton-dark" href="https://app.linksatcba.com.ar/applications/form/new"
-                    target="_blank">Solicitar plan</a>
-                <a class="boton-section-4" href="https://walink.co/2a80b8" target="_blank">Mas información</a>
-            </div>
-        </div>
-    </section>
-
 
 
     <section class="section-5 hidden" style="background-image:url(img/hombre-recostado2.png)">
@@ -667,18 +902,23 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xl-6 col-lg-6 text-center text-lg-left">
-                        <div class="copyright-text">
-                            <p>© 2023 - LINKSAT - Todos los derechos reservados.</p>
+                        <div style="text-align:center; font-size:14px; color:#666; margin-top:20px; padding:20px 0;">
+                            CUIT: <strong>30-71681960-0</strong> Razón social: <strong>Linksat Córdoba SAS</strong>.
                         </div>
                     </div>
 
                 </div>
             </div>
         </div>
+
     </footer>
 
     <a class="floating-button" href="https://walink.co/2a80b8" target="_blank">
-        <img src="img/whatsapp-icon.png" alt="" />
+        <div class="mensaje-flotante hidden" id="mensajeLinky">
+            <span class="mensaje-texto">¡Hola! Soy Linky, tu asistente virtual 👋</span>
+            <div class="mensaje-flecha"></div>
+        </div>
+        <img src="img/linky/avatar linky whatsapp.png" alt="" />
     </a>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
