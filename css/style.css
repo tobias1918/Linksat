@@ -2439,8 +2439,9 @@ hr {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    height: 20vh;
-    width: 20vh;
+    /* --- CAMBIO AQUÍ: Este es el tamaño que antes era del hover (más pequeño) --- */
+    height: 18.5vh;
+    width: 18.5vh;
     color: white;
     border: none;
     border-radius: 50%;
@@ -2461,9 +2462,10 @@ hr {
   transition: transform 0.3s ease;
 }
 
+/* --- CAMBIO AQUÍ: El hover ahora agranda ligeramente el botón (antes era el tamaño normal) --- */
 .floating-button:hover {
-  height: 18.5vh;
-  width: 18.5vh;
+  height: 20vh;
+  width: 20vh;
 }
 
 .floating-button:hover img {
@@ -3307,17 +3309,17 @@ ul {
 }
 
 @media (max-width: 480px) {
-  .floating-button {
-    height: 18vh;
-    width: 18vh;
+.floating-button {
+    height: 12.5vh; /* Tamaño que antes era del hover */
+    width: 12.5vh;
     bottom: 12px;
     right: 12px;
-  }
+}
   
-  .floating-button:hover {
-    height: 12.5vh;
-    width: 12.5vh;
-  }
+.floating-button:hover {
+    height: 14vh; /* Un poco más grande */
+    width: 14vh;
+}
   
   .mensaje-flotante {
     font-size: 12px;
@@ -3379,12 +3381,17 @@ ul {
         font-size: 0.9rem;
     }
   
-  .floating-button {
-    height: 15vh;
-    width: 15vh;
+.floating-button {
+    height: 14.5vh; /* Tamaño que antes era del hover */
+    width: 14.5vh;
     bottom: 10px;
     right: 0px;
-  }
+}
+  
+.floating-button:hover {
+    height: 16vh; /* Un poco más grande */
+    width: 16vh;
+}
   
   .mensaje-flotante {
     font-size: 11px;
